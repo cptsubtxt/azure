@@ -12,7 +12,7 @@ jobs:
         with:
           args: "example.md -o example.pdf --template /.pandoc/templates/eisvogel --listings"
       
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3        
         with:
-          name: output
-          path: output
+          name: example
+          path: output/doc/example.pdf
