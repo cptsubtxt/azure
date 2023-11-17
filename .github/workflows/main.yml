@@ -14,8 +14,4 @@ jobs:
     steps:
       - uses: docker://pandoc/extra
         with:
-          args: >-  # allows you to break string into multiple lines
-            --listings
-            --standalone
-            --output=example.pdf
-            example.md
+          args: "example.md -o example.pdf --template eisvogel --listings"
