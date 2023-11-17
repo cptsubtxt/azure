@@ -3,15 +3,16 @@ name: Simple Usage
 on: push
 
 jobs:
-  check_env:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: docker://pandoc/extra
-        with:
-          args: "--help" # gets appended to pandoc command
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v3
+      
       - uses: docker://pandoc/extra
         with:
           args: "example.md -o example.pdf --template /.pandoc/templates/eisvogel --listings"
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: output
