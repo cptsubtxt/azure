@@ -8,14 +8,13 @@ jobs:
     steps:
       - uses: docker://pandoc/extra
         with:
-          args: "ls -latr ./pandoc/templates" # gets appended to pandoc command
+          args: "--help" # gets appended to pandoc command
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
       - uses: docker://pandoc/extra
         with:
           args: >-  # allows you to break string into multiple lines
-            --template eisvogel 
             --listings
             --standalone
             --output=example.pdf
