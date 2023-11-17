@@ -10,9 +10,9 @@ jobs:
       
       - uses: docker://pandoc/extra
         with:
-          args: "example.md -o example.pdf --template /.pandoc/templates/eisvogel --listings"
+          args: "docs/az900.md -o az900.pdf --from markdown+table_captions --template /.pandoc/templates/eisvogel --listings"
       
       - uses: actions/upload-artifact@v3        
         with:
-          name: example
-          path: example.pdf
+          name: az900
+          path: az900.pdf
