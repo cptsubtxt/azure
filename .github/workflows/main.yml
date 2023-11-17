@@ -3,6 +3,12 @@ name: Simple Usage
 on: push
 
 jobs:
+  check_env:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: docker://pandoc/extra
+        with:
+          args: "--help" # gets appended to pandoc command
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
