@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: docker://pandoc/extra
         with:
-          args: "--help" # gets appended to pandoc command
+          args: "ls -latr ./pandoc/templates" # gets appended to pandoc command
   convert_via_pandoc:
     runs-on: ubuntu-22.04
     steps:
