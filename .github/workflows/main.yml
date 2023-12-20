@@ -12,7 +12,8 @@ jobs:
         id: files_list
         run: |
           mkdir output  # create output dir
-          echo "name=FILELIST::$(find docs -name '*.md' -print) > $GITHUB_OUTPUT"
+          echo "::set-output name=FILELIST::$(find docs -name '*.md' -print)" 
+          # > $GITHUB_OUTPUT
 
       - name: Processing my found files from output
         run: |
@@ -22,7 +23,7 @@ jobs:
             file_name=$(basename "${i}")
             cd file_path
             cat file_name
-          done          
+          done      
       
       - uses: docker://pandoc/extra
         with:
