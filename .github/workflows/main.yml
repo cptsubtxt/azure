@@ -11,7 +11,8 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          echo "name=FILELIST::$(find docs -name '*.md' -print)" > $GITHUB_OUTPUT
+          mkdir output  # create output dir
+          echo "name=FILELIST::$(find docs -name '*.md' -print) > $GITHUB_OUTPUT"
 
       - name: Processing my found files from output
         run: |
