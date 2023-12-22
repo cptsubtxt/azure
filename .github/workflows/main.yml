@@ -1,41 +1,23 @@
-name: pdf from mdfiles
-
+name: Generate PDFs from MD
 on: push
-
-defaults:
-  run:
-    shell: bash
-    working-directory: ./docs
 
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
+    container:
+      image: docker://pandoc/extra
+      options: --entrypoint=sh
     steps:
-      - uses: actions/checkout@v3
-        with:
-          path: ${{ github.workspace }}
-
-      - name: create file list
-        id: files_list
+      - uses: actions/checkout@v2
+      - name: prepare output directories
         run: |
-          {
-          echo 'FILELIST<<EOF'
-          find . -name '*.md' -print 
-          echo EOF
-          } >> "$GITHUB_ENV"
-
-      - name: Processing my found files from output
+          for d in */; do
+            mkdir -p output/$d
+          done
+      - name: convert md to docx
         run: |
-          for i in $FILELIST; do
-            echo "Do something with file ${i}"
-            cat "${i}"
-          done  
-      
-      - uses: docker://pandoc/extra
+          find ./ -iname '*.md' -type f -exec sh -c 'pandoc ${0} -o output/${0%.md}.pdf --from markdown+table_captions --template /.pandoc/templates/eisvogel --listings' {} \;
+      - uses: actions/upload-artifact@master
         with:
-          args: "az900.md -o az900.pdf --from markdown+table_captions --template /.pandoc/templates/eisvogel --listings"
-      
-      - uses: actions/upload-artifact@v3        
-        with:
-          name: az900
-          path: az900.pdf
+          name: output
+          path: output
