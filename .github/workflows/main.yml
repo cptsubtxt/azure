@@ -18,22 +18,21 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          mkdir output  # create output dir
-          echo "::set-output name=FILELIST::$(find . -name '*.md' -print)" 
-          # > $GITHUB_OUTPUT
+          {
+          echo 'FILELIST<<EOF'
+          find . -name '*.md' -print 
+          echo EOF
+          } >> "$GITHUB_ENV"
 
       - name: Processing my found files from output
         run: |
-          IFS="," read -a myarray <<< ${{ steps.files_list.outputs.FILELIST }}
-          for i in "${myarray[@]}"; do
-            file_path=$(dirname "${i}")
-            file_name=$(basename "${i}")
-            cat file_name
-          done
+          for i in $FILELIST; do
+            echo "Do something with file ${i}"
+          done  
       
       - uses: docker://pandoc/extra
         with:
-          args: "docs/az900.md -o az900.pdf --from markdown+table_captions --template /.pandoc/templates/eisvogel --listings"
+          args: "az900.md -o az900.pdf --from markdown+table_captions --template /.pandoc/templates/eisvogel --listings"
       
       - uses: actions/upload-artifact@v3        
         with:
