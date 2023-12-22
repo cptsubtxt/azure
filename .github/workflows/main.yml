@@ -18,7 +18,7 @@ jobs:
 
       - name: Processing my found files from output
         run: |
-          cd docs
+          ${PWD}
           IFS="," read -a myarray <<< ${{ steps.files_list.outputs.FILELIST }}
           for i in "${myarray[@]}"; do
             file_path=$(dirname "${i}")
