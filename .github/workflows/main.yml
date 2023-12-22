@@ -28,6 +28,7 @@ jobs:
         run: |
           for i in $FILELIST; do
             echo "Do something with file ${i}"
+            cat "${i}"
           done  
       
       - uses: docker://pandoc/extra
