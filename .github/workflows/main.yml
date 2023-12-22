@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: ${{ github.workspace }}/docs
+          path: ${{ github.workspace }}
 
       - name: create file list
         id: files_list
