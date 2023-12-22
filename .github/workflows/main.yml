@@ -1,6 +1,11 @@
-name: Simple Usage
+name: pdf from mdfiles
 
 on: push
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./docs
 
 jobs:
   convert_via_pandoc:
