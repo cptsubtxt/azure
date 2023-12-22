@@ -22,7 +22,6 @@ jobs:
           for i in "${myarray[@]}"; do
             file_path=$(dirname "${i}")
             file_name=$(basename "${i}")
-            cd file_path
             cat file_name
           done
       
