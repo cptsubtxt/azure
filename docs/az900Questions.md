@@ -20,4 +20,53 @@
 
 - Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP) implements a security solution for the users who are on on-premises Active directory with following features: Monitor User login/logout, Monitor Active Directory User account changes, Monitor Machine Account
 
--
+- Virtual Machine must-have: Azure Virtual Network, NIC
+
+- Azure free account can be used to bring load into production. The billihng of resources that are not covered by the free account are billed pay-as-you go
+
+- Azure Data Lake can be used to integrate Apps (e.g. PowerBI), scalable storage, infrequently (https://learn.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-azure-data-lake-storage-integration)
+
+- You should use Azure SQL, Azure PostgreSQL, or Cosmos DB for frequently accessed data.
+
+- PowerShell 6.2.4 and later is compatible on all OS platforms. However, Microsoft recommends PowerShell 7.x. [Compatability of version with differnt OS](https://docs.microsoft.com/en-us/powershell/azure/?view=azps-4.5.0)
+
+- Tags from resource groups are not inherited to resources (https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags)
+
+- Defender for Identity enables SecOp analysts and security professionals struggling to detect advanced attacks in hybrid environments to:
+
+Monitor users, entity behavior, and activities with learning-based analytics
+Protect user identities and credentials stored in Microsoft Entra ID
+Identify and investigate suspicious user activities and advanced attacks throughout the kill chain
+Provide clear incident information on a simple timeline for fast triage
+
+- Azure blob storage that is infrequently accessed is Cool and Archived tiers
+
+- Azure blob storage that is frequently accessed is Hot Storage tier
+
+- Azure management groups are used for organizing resources in Azure e.g. different groups of users
+
+- The Azure subscription gives you authenticated and authorized access to create Azure resources and services
+
+- Only one free account subscription is allowed per User.
+
+- Azure Databox is the prefered solution to transfer huge amounts of data to the cloud. 80TB in maximum and does not need network
+
+- Conditional Access can help to block the sign-in from untrusted locations.
+
+- Azure AD Device management helps register our devices to azure.
+
+- Microsoft Defender for Identity leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization
+
+- Azure File Sync helps us to configure cloud tiering so the most frequently accessed files are replicated locally, while infrequently accessed files are kept in the cloud until requested.
+
+- Network Security group review
+
+- Review [Support Plans](https://azure.microsoft.com/en-us/support/plans/)
+
+- Azure content delivery network is an efficient way to distribute web content to users across the world
+
+- **Azure HDInsight** is a managed Apache Hadoop service to analyze streaming or historical data. Lets you run Apache Spark, Apache Hive, Apache Kafka, Apache HBase in the cloud.◊
+
+- Not all regions offer availability zones, check [Azure Regions with availabilty zones](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
+
+- Azure Functions is a Platform as a service (PaaS)
