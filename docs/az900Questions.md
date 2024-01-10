@@ -65,7 +65,7 @@ Provide clear incident information on a simple timeline for fast triage
 
 - Azure content delivery network is an efficient way to distribute web content to users across the world
 
-- **Azure HDInsight** is a managed Apache Hadoop service to analyze streaming or historical data. Lets you run Apache Spark, Apache Hive, Apache Kafka, Apache HBase in the cloud.◊
+- **Azure HDInsight** is a managed Apache Hadoop service to analyze streaming or historical data. Lets you run Apache Spark, Apache Hive, Apache Kafka, Apache HBase in the cloud.
 
 - Not all regions offer availability zones, check [Azure Regions with availabilty zones](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
