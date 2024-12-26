@@ -70,3 +70,19 @@ Provide clear incident information on a simple timeline for fast triage
 - Not all regions offer availability zones, check [Azure Regions with availabilty zones](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 - Azure Functions is a Platform as a service (PaaS)
+
+- An appropriate support plan has to be bought separately. It does not come as part of the App service plan e.g.
+
+- Local network gateway represents the on-premise VPN Device
+
+- The Azure CLI, Azure Powershell, and Azure Portal are all options on MacOs, Linux and Windows to create resources
+
+- VMs can be deallocated automatically for saving costs: (https://learn.microsoft.com/de-de/rest/api/compute/virtual-machines/power-off?view=rest-compute-2023-10-02&WT.mc_id=modinfra-32183-socuff&tabs=HTTP)
+
+- SLA for Virtual machines deployed across two or more Availability Zones at least Availability 99.99% of the time.
+
+- Azure Policy can be grouped into Initiative Defintions to have them in one place.
+
+- Azure DDoS Protection has the following features: DDoS Infrastructure Protection, DDoS Network Protection and DDoS IP Protection [Table](https://learn.microsoft.com/en-us/training/modules/introduction-azure-ddos-protection/4-when-to-use-azure-ddos-protection)
+
+- Identity Secure Score helps in identifying the identity secure score to provide the recommendations in Azure AD
