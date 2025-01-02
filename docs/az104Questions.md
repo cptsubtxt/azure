@@ -56,7 +56,7 @@ https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-li
 
 - IP Flow Verify checks if a packets are allowed or denied to or from a virtual machine
 
-- Packeet Capture should be used to check on any network intrusions
+- Packet capture should be used to check on any network intrusions, packet capture is a feature in Azure Network Watcher that enables detailed analysis of network traffic. By capturing packets traversing the VPN tunnels, you can identify patterns or anomalies, including latency issues, by examining timestamps and response delays in the captured data.
 
 - Steps to set a container registry https://learn.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-prepare-registry
 
@@ -71,6 +71,27 @@ https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-li
 - How to create an anomaly alert: https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/analyze-unexpected-charges#create-an-anomaly-alert and how to edit it: https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-manage-alert-rules
 
 - Identify scope in Azure: https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope
+
+- RBAC - deny assignments take precedence over role-based access (RBAC assignments)
+
+- "Restore VM" option in the Recovery Services vault is the appropriate method for restoring a full virtual machine
+
+- Drill VM Failover https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-dr-drill#failover
+
+- Azure Policy the deployIfNotExists effect ensures that any existing resources outside the allowed locations can be remediated
+
+- Azure Logic Apps provide a flexible platform to automate workflows by interacting with various Azure services, including Azure Advisor through its REST API.
+  How to create a logic app
+
+- Public-facing load balancers: Most A Standard SKU Static Public IP is the most suitable choice (Static IP crucial)
+
+- Cross region Load balancer: A Standard SKU Dynamic Public IP is well-suited for this scenario ()
+
+- Load balancer with sticky sessions: Basic SKU Public IP - Load balancer with sticky sessions: For load balancers requiring sticky sessions, the Basic SKU Public IP is a cost-effective option. Sticky sessions (session persistence) ensure consistent routing of client requests to the same backend instance. https://learn.microsoft.com/en-us/azure/load-balancer/distribution-mode-concepts#session-persistence
+
+- Loadbalancer Links: https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview#internal-load-balancer, https://learn.microsoft.com/en-us/azure/load-balancer/cross-region-overview#standard-sku
+
+- Public IP Addresses: https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku
 
 ## Powershell Commands
 
